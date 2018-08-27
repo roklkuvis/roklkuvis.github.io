@@ -6,8 +6,15 @@
 	<div id="quesRes"></div>
 </div>
 <script>
+var previousRand = undefined;
 function generateQuestion() {
 	var rand = Math.floor(Math.random() * quizObj.length);
+	if(previousRand) {
+		if(previousRand === rand) {
+		   	generateQuestion();
+		}
+	}
+	previousRand = rand;
 	console.log(rand);
 	var str = "";
 	str += "<p style='white-space: pre'>" + quizObj[rand].question + "</p>";
