@@ -13,14 +13,17 @@
 		if(quizObj[rand].image !== "") {
 			str += "<img src='" + quizObj[rand].image + "'></br>";
 		}
-		str+= "<p>" + quizObj[rand].question + "</p>";
+		str+= "<p style='white-space: pre'>" + quizObj[rand].question + "</p>";
 
 		document.getElementById("quesRes").innerHTML = str;
  }
  var quizObj = [
    { 
-       "question": "Silitä kissaa",
-       "image": "testi.jpg"
+       "question": "Etsi lähellä olevasta rakennetusta ympäristöstä erilaisia... 
+	   a) viivoja 
+	   b) muotoja 
+	   c) tekstuureja ",
+       "image": "P7280469.JPG"
   },
   { 
        "question": "Leiki koiran kanssa",
